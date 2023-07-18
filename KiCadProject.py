@@ -1,12 +1,14 @@
 from pathlib import Path
+from typing import List, Optional
 
 
 class KiCadProject:
-    def __init__(self, dir: str) -> None:
-        self.dir = Path(dir)
-        if not self.dir.is_dir():
+    def __init__(self, directory: str) -> Optional[None]:
+        # bad pracice ot use an __init__ file do more than one thing
+        self.directory = Path(dir)
+        if not self.directory.is_dir():
             raise "Invalid directory path"
-        return
+        return None
 
-    def output_files(self) -> list[str]:
-        return [p for p in self.dir.iterdir() if p.is_file()]
+    def output_files(self) -> List[str]:
+        return [p for p in self.directory.iterdir() if p.is_file()]
