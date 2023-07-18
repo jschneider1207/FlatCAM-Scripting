@@ -3,7 +3,7 @@ from typing import List, Optional
 
 
 class KiCadProject:
-    def __init__(self, directory: str) -> Optional[None]:
+    def __init__(self, directory) -> None:
         # bad pracice ot use an __init__ file do more than one thing
         self.directory = Path(dir)
         if not self.directory.is_dir():
