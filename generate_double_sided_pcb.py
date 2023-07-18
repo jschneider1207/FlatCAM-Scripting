@@ -8,8 +8,7 @@ import click
 @click.option('--tools', type=click.File('rb'), default='r:/FlatCAM Scripting/tools.yaml')
 @click.option('--out-dir', type=click.Path(file_okay=False, dir_okay=True), default='r:/FlatCAM/')
 def generate(kicad_project, rubout, prefer_mill_drill, tools, out_dir):
-
-    return
+    pass
 
 
 if __name__ == '__main__':
